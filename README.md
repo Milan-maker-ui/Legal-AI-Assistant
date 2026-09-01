@@ -315,85 +315,6 @@ legal-ai-assistant/
 
 ---
 
-# 💻 Installation
-
-## 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/legal-ai-assistant.git
-```
-
-```bash
-cd legal-ai-assistant
-```
-
----
-
-## 2. Create a virtual environment
-
-### Windows
-
-```bash
-python -m venv venv
-```
-
-Activate it:
-
-```bash
-venv\Scripts\activate
-```
-
-### macOS / Linux
-
-```bash
-python3 -m venv venv
-```
-
-```bash
-source venv/bin/activate
-```
-
----
-
-## 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 4. Configure API key
-
-Create a `.env` file:
-
-```text
-OPENAI_API_KEY=your_api_key_here
-```
-
-**Never commit your `.env` file to GitHub.**
-
----
-
-## 5. Add legal documents
-
-Place PDF files inside:
-
-```text
-data/legal_documents/
-```
-
-Example:
-
-```text
-data/legal_documents/
-├── employment_contract.pdf
-├── company_policy.pdf
-└── legal_agreement.pdf
-```
-
----
-
 # 🔌 API Usage
 
 ## Ask a Question
@@ -609,23 +530,6 @@ Document AI
  ├── Chunking
  └── Metadata
 ```
-
----
-
-# 👨‍💻 Author
-
-**Milan Arote**
-
-MCA — Artificial Intelligence & Machine Learning
-
-Interested in:
-
-* AI/ML Engineering
-* Generative AI
-* LLM Applications
-* RAG Systems
-* Data Science
-* Python Backend Development
 
 ---
 
