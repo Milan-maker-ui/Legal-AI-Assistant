@@ -5,37 +5,23 @@ from openai import OpenAI
 
 
 load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
-)
-
-
-def generate_answer(
-    question: str,
-    retrieved_documents
-):
-
+def generate_answer(question: str, retrieved_documents):
     context_parts = []
-
     for document in retrieved_documents:
-
         context_parts.append(
             f"""
 SOURCE:
 {document["source"]}
-
 PAGE:
 {document["page"]}
-
 CONTENT:
 {document["text"]}
 """
         )
 
-    context = "\n\n".join(
-        context_parts
-    )
+    context = "\n\n".join(context_parts)
 
     prompt = f"""
 You are a Legal AI Assistant.
@@ -62,9 +48,6 @@ USER QUESTION:
 {question}
 """
 
-    response = client.responses.create(
-        model="gpt-4.1-mini",
-        input=prompt
-    )
+    response = client.responses.create(model="gpt-4.1-mini", input=prompt)
 
     return response.output_text
