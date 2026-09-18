@@ -289,7 +289,7 @@ legal-ai-assistant/
 │
 ├── data/
 │   └── legal_documents/
-│       └── sample.pdf
+│       └── employment_contract.pdf
 │
 ├── .env
 ├── .gitignore
